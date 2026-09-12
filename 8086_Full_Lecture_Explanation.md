@@ -372,12 +372,17 @@ A system where the CPU adjusts traffic signals whenever an emergency ambulance i
 | Typical use | PCs, embedded/educational systems | Multiprocessor systems, systems with an 8087 coprocessor, industrial control |
 
 ### E2. Addressing Modes — 8 Ways to Say "Where's the Data?"
-(Full table already in Part A — quick recap with the pattern to notice:)
-Immediate (value is baked into the instruction) → Register (value's in a register) →
-Direct (a fixed memory offset) → Register indirect (a register *holds* the offset) →
-Based (register + a number) → Indexed (index register + a number) → Based-indexed
-(base + index) → Based-indexed + displacement (base + index + a number). Each mode adds
-one more layer of flexibility for finding data in memory.
+
+| Mode | Example | Meaning |
+|---|---|---|
+| Immediate | `MOV AX, 1234H` | value is right there in the instruction |
+| Register | `MOV AX, BX` | value is in a register |
+| Direct | `MOV AX, [2000H]` | offset given directly |
+| Register indirect | `MOV AX, [BX]` | register *holds* the offset |
+| Based | `MOV AX, [BX+05]` | base register + displacement |
+| Indexed | `MOV AX, [SI+10]` | index register + displacement |
+| Based-indexed | `MOV AX, [BX+SI]` | base + index |
+| Based-indexed + disp. | `MOV AX, [BX+SI+08]` | base + index + displacement |
 
 ### E3. Instruction Set — 7 Categories
 1. **Data transfer:** MOV, PUSH, POP, XCHG, IN, OUT, LEA, LDS, LES
