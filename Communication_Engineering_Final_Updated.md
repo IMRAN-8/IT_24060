@@ -1,6 +1,4 @@
 # Communication Engineering — Complete Simplified Study Notes
-*Condensed from Lectures 01–05. Everything you need is in this file — formulas, definitions, examples, and worked problems.*
-**⭐ = appears in the 2023 and/or 2024 previous-year question papers**
 
 ---
 
@@ -449,62 +447,8 @@ A sampled value is rounded to the nearest quantization level, then that level is
 ---
 ---
 
-# ⚠️ Exam Topics NOT Covered in the Provided Lecture Slides
-These appeared in the previous-year papers but the 5 lecture slide decks you gave me don't actually explain them (only the course-outline slide *names* some of these) — you'll need a textbook/other source for these specific items:
-- **Line coding (NRZ, RZ formats)** — how to construct the waveform for a bit sequence like `11011010`
-- **Non-uniform quantization technique using a uniform quantizer (companding)** — only the *name* is mentioned in the slides, not the method
-- **White noise and Thermal noise** — only named in the course outline, never explained
-- *(Correlation is partly covered — see Autocorrelation in Unit 2 — but no separate simple "correlation with example" is given.)*
 
----
----
-
-# 1️⃣ MOST IMPORTANT TOPICS (highest study priority overall)
-1. AM modulation index, over-modulation, and transmission efficiency (with numeric problems)
-2. FM: frequency deviation, modulation index, and Carson's Rule bandwidth (with numeric problems)
-3. Coherent vs. non-coherent detection and DSB-SC/SSB demodulation
-4. Fourier Transform of standard signals (cos, e^(−at)u(t), impulse, rect) + plotting line spectra
-5. Sampling theorem, aliasing, and anti-aliasing
-6. Quantization noise and the SQR formula (1.76 + 6.02n)
-7. Signal classification (energy/power, deterministic/random, even/odd, analog/digital)
-8. Block diagram of a communication system + channel types & properties
-9. Distortion types (linear, non-linear, multipath) and their consequences
-10. Modulation basics: what it is, why it's needed, antenna-height example
-
-# 2️⃣ TOPICS ASKED IN PREVIOUS YEARS (2023 & 2024 papers)
-| Topic | Year(s) asked |
-|---|---|
-| Coherent vs non-coherent detector (m between 0–1) | 2023 & 2024 (identical question) |
-| AM transmission/power efficiency (formula + numeric) | 2023 & 2024 |
-| FM deviation, modulation index, Carson's Rule (numeric) | 2023 & 2024 |
-| Modulation index & over/linear modulation | 2023 & 2024 |
-| Fourier transform/series of a given signal + spectrum sketch | 2023 & 2024 |
-| Simplex / half-duplex / full-duplex | 2023 & 2024 |
-| Define modulating signal, carrier, AM envelope | 2023 & 2024 |
-| Application of AM | 2023 & 2024 |
-| Sampling theorem & aliasing | 2024 |
-| Quantization & SQR derivation | 2024 |
-| DSB-SC generation, spectrum, USB/LSB, rectifier demodulation | 2023 |
-| Ring modulator / switching modulator (short note) | 2023 |
-| Energy vs power signal (define/determine) | 2023 & 2024 |
-| Analog vs digital, deterministic vs random, unit step/impulse | 2023 |
-| Channel characteristics & most useful channel | 2023 |
-| Optical fiber features | 2024 |
-| Block diagram of communication system | 2024 |
-| Linear/non-linear distortion & multipath effects | 2023 |
-| Compare analog vs digital modulation | 2023 |
-| PCM features, why PCM makes a system digital | 2023 |
-| Non-uniform quantization technique (⚠️ not on slides) | 2023 |
-| Angle modulation definition & features | 2023 |
-| Why modulation reduces antenna height | 2023 |
-| SSB phase-shift method | 2024 |
-| Synchronous detection method | 2024 |
-| Correlation, with example (⚠️ only autocorrelation covered) | 2024 |
-| Line coding & NRZ/RZ construction (⚠️ not on slides) | 2024 |
-| PAM definition & drawbacks | 2024 |
-| White noise, thermal noise, SNR (⚠️ not on slides) | 2023 |
-
-# 3️⃣ QUICK LAST-MINUTE REVISION NOTES
+# QUICK LAST-MINUTE REVISION NOTES
 - **m = Em/Ec = (Emax−Emin)/(Emax+Emin)** — m≤1 normal, m>1 over-modulation (envelope distortion)
 - **Pt = Pc(1+m²/2)**, **η = m²/(2+m²)×100%**, max η = 33.3% at m=1
 - **Δf = K·Vm** (for K given in Hz/V or kHz/V), **mf = Δf/fm**, **Carson's Rule: B = 2(Δf+fm)**
@@ -523,9 +467,3 @@ These appeared in the previous-year papers but the 5 lecture slide decks you gav
 
 
 ---
-
-# Class-Note Integration Note
-
-The original class note was checked page-by-page against this resource. The final version above incorporates the useful additional material that was not already present, including the basic modulator block diagram, channel-selection factors, guided-media comparison, additional digital-communication points, AM applications, the explicit DSB-SC worked pattern, the square-wave Fourier-series form, angle-modulation applications, the full PCM system flow, and the class-note companding flow.
-
-Where the class note conflicts with the uploaded lecture notation, the lecture-based formulation is retained and the discrepancy is kept explicit rather than silently changing the mathematics.
