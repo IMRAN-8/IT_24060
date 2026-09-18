@@ -1,18 +1,4 @@
 # Communication Engineering — Final Merged Exam Notes
-*Condensed from Lectures 01–05, cross-checked against the 2023 & 2024 previous-year papers, and topped up with the useful extra material found in your friend's class notes.*
-**⭐ = appears in the 2023 and/or 2024 exam papers**
-
-## Editor's Note — What's in This Version
-
-> **Corrected error (affects your highest-yield FM question):** one earlier draft used Δf = K·Vm/(2π), copied literally from the lecture slide's general derivation. Applying it to the standard worked example (K=5kHz, Vm=2) gives a messy Δf≈1.59kHz. This is a known textbook problem (Boylestad) where **K is already a deviation sensitivity in kHz/Volt**, so no ÷2π is needed. Correct formula used throughout: **Δf = K·Vm** (→ Δf=10kHz, mf=5 for the standard example). Your friend's notes independently used this same no-÷2π formula for the identical problem — good confirmation it's right.
->
-> **Removed:** a generic modulation-index example (Emax=9V, Emin=3V) that wasn't traceable to any of your 5 lecture decks — replaced with a labelled "practice" example instead of presenting it as lecture content.
->
-> **New in this version (from your friend's class notes — checked and correct):** the companding block diagram for non-uniform quantization (this closes a gap that was previously flagged as "not covered"); a full worked DSB-SC example with USB/LSB and rectifier-demodulation proof; a second worked FM example (the 2024 Q3c-style problem); the modulator block diagram; why twisted-pair cables are twisted; a twisted-pair vs coaxial vs fiber comparison table; the switching-modulator output formula; extra items for digital-communication pros/cons and system limitations; and why the carrier frequency must be higher than the message frequency.
->
-> **One error caught in your friend's notes (not used here):** in one antenna-height example they compute h = (3×10⁸)/(4×10,000) and write "= 75 m" — that's an arithmetic slip; it actually equals 7500 m = 7.5 km (they get it right elsewhere in the same notes). Use the 7.5 km figure.
->
-> **Syllabus update — Lecture-02 trimmed:** your teacher said to skip Lecture-02 (Signal Analysis and Transmission) from slide 30 onward. That removes LTI systems/distortionless transmission, linear/non-linear/multipath distortion, energy & power spectral density, and autocorrelation from this year's syllabus — those sections have been deleted below. Everything through slide 29 (signals, classification, singularity functions, spectra, Fourier series/transform) stays, and I've added two things that were genuinely missing from that in-scope range: the frequency-domain view of AM (slide 28–29) and the link between Fourier series and the Fourier transform (slide 20). Lectures 01, 03, 04, 05 are unaffected.
 
 ---
 
@@ -519,52 +505,6 @@ Sample value → Quantized value → Code number → Binary code
 | Correlation, general definition with a simple example | ⚠️ Partly covered — see Autocorrelation in Unit 2 — but no separate simple "correlation with example" is given anywhere in your materials |
 
 ---
-
-# 1️⃣ Most Important Topics (highest study priority overall)
-1. AM modulation index, over-modulation, and transmission efficiency (with numeric problems)
-2. FM: frequency deviation, modulation index, and Carson's Rule bandwidth (with numeric problems) — use **Δf=K·Vm** (no ÷2π)
-3. Coherent vs. non-coherent detection and DSB-SC/SSB demodulation
-4. Fourier Transform of standard signals + plotting line spectra
-5. Sampling theorem, aliasing, and anti-aliasing
-6. Quantization noise, SQR formula, and companding (non-uniform quantization)
-7. Signal classification (energy/power, deterministic/random, even/odd, analog/digital)
-8. Block diagram of a communication system + channel types & properties (including twisted pair/coaxial/fiber comparison)
-9. Modulation basics: what it is, why it's needed, antenna-height example, why carrier frequency > message frequency
-10. Modulation viewed in the frequency domain (spectrum shifting) and the FS↔FT link
-
-# 2️⃣ Topics Asked in Previous Years (2023 & 2024 papers)
-| Topic | Year(s) asked |
-|---|---|
-| Coherent vs non-coherent detector (0≤m≤1) | 2023 & 2024 |
-| AM transmission/power efficiency (formula + numeric) | 2023 & 2024 |
-| FM deviation, modulation index, Carson's Rule (numeric) | 2023 & 2024 |
-| Modulation index & over/linear modulation | 2023 & 2024 |
-| Fourier transform/series of a given signal + spectrum sketch | 2023 & 2024 |
-| Simplex / half-duplex / full-duplex | 2023 & 2024 |
-| Define modulating signal, carrier, AM envelope | 2023 & 2024 |
-| Application of AM | 2023 & 2024 |
-| Sampling theorem & aliasing | 2024 |
-| Quantization & SQR derivation | 2024 |
-| DSB-SC generation, spectrum, USB/LSB, rectifier demodulation | 2023 |
-| Ring modulator / switching modulator (short note) | 2023 |
-| Energy vs power signal (define/determine) | 2023 & 2024 |
-| Analog vs digital, deterministic vs random, unit step/impulse | 2023 |
-| Channel characteristics & most useful channel | 2023 |
-| Optical fiber features | 2024 |
-| Block diagram of communication system | 2024 |
-| Linear/non-linear distortion & multipath effects | 2023 — ⚠️ **now out of syllabus, skip** |
-| Compare analog vs digital modulation | 2023 |
-| PCM features, why PCM makes a system digital | 2023 |
-| Non-uniform quantization technique (companding) | 2023 |
-| Angle modulation definition & features | 2023 |
-| Why modulation reduces antenna height | 2023 |
-| SSB phase-shift method | 2024 |
-| Synchronous detection method | 2024 |
-| Correlation, with example ⚠️ (only autocorrelation covered) | 2024 |
-| Line coding & NRZ/RZ construction ⚠️ (not covered) | 2024 |
-| PAM definition & drawbacks | 2024 |
-| White noise, thermal noise, SNR ⚠️ (not covered) | 2023 |
-
 # 3️⃣ Quick Last-Minute Revision Notes
 ```
 COMMUNICATION SYSTEM
